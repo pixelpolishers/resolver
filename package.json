@@ -1,0 +1,42 @@
+{
+    "name": "pixelpolishers-resolver",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": "Pixel Polishers",
+    "keywords": [
+        "dependency manager",
+        "dependency",
+        "manager",
+        "resolver",
+        "pixelpolishers"
+    ],
+    "contributors": [
+        "Walter Tamboer <walter.tamboer@pixelpolishers.com>"
+    ],
+    "dependencies": {
+        "colors": "*",
+        "commander": "*",
+        "mkdirp": "*"
+    },
+    "bin": {
+        "resolve": "./bin/resolve"
+    },
+    "directories": {
+        "bin": "./bin",
+        "test": "./test"
+    },
+    "os": ["win32"],
+    "main": "./lib/resolver.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pixelpolishers/resolver.git"
+    },
+    "description": "A C++ dependency manager and makefile generator.",
+    "devDependencies": {
+        "nodeunit": "*"
+	},
+    "scripts": {
+        "test": "node ./bin/test"
+    },
+    "preferGlobal": true
+}
