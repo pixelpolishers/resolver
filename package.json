@@ -19,7 +19,8 @@
         "mkdirp": "*"
     },
     "bin": {
-        "resolve": "./bin/resolve"
+        "resolve": "./bin/resolve",
+        "yuidoc": "./node_modules/bin/yuidoc"
     },
     "directories": {
         "bin": "./bin",
@@ -33,7 +34,8 @@
     },
     "description": "A C++ dependency manager and makefile generator.",
     "devDependencies": {
-        "nodeunit": "*"
+        "nodeunit": "*",
+        "yuidocjs": "*"
 	},
     "scripts": {
         "test": "node ./bin/test"
