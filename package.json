@@ -16,7 +16,9 @@
     "dependencies": {
         "colors": "*",
         "commander": "*",
-        "mkdirp": "*"
+        "mkdirp": "*",
+        "node-uuid": "*",
+        "xmlbuilder": "*"
     },
     "bin": {
         "resolve": "./bin/resolve",
