@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+		<h1>Command Reference</h1>
+
+        <include>reference/commands/compile</include>
+        <include>reference/commands/generate</include>
+        <include>reference/commands/update</include>
+	</content>
+</makedocs>

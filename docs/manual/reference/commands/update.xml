@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+        <h2>update</h2>
+        <p>
+            Updates the dependencies to the version configured in your config file. When the
+            dependencies are not installed yet, Resolver will install them.
+        </p>
+
+        <h3>Usage</h3>
+        <p>
+            <code>resolver [options] update</code>
+        </p>
+
+        <h3>Arguments and Options</h3>
+        <table>
+            <tr>
+                <td>-w [path]</td>
+                <td>--working-dir [path]</td>
+                <td>Makes it possible to specify the working directory to execute in.</td>
+            </tr>
+            <tr>
+                <td>-s</td>
+                <td>--silent</td>
+                <td>Disables all log messages</td>
+            </tr>
+        </table>
+
+        <h3>Exit Code</h3>
+        <p>
+            This command will exit with the code 0 when it succeeds; 1 in case of an error.
+        </p>
+	</content>
+</makedocs>

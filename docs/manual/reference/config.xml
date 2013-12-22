@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+        <h1>Configuration Reference</h1>
+
+        <h2>Introduction</h2>
+        <p>
+            All resolver projects should contain a configuration file. Resolver uses JSON to
+            configure a project, therefor a <strong>resolver.json</strong> is required within the
+            root of your project.
+        </p>
+
+        <h2>Types</h2>
+        <p>
+            Some members within the configuration file are of a specific type. Resolver contains
+            the following types.
+        </p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><a href="reference/type/configuration">Configuration</a></td>
+                <td>An object containing members describing a project's configuration.</td>
+            </tr>
+            <tr>
+                <td><a href="reference/type/project">Project</a></td>
+                <td>An object containing members describing a project.</td>
+            </tr>
+        </table>
+
+        <h2>Root Members</h2>
+        <p>
+            The root of the configuration file can contain the following members.
+        </p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Required</th>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>The name of the project. This should be in the form of <strong>vendor/name</strong></td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>projects</td>
+                <td>array</td>
+                <td>The list with projects. This should be an array with objects of the type <a href="reference/type/project">Project</a></td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>vendor</td>
+                <td>string</td>
+                <td>The path of the directory to store the dependencies in. The default value is <strong>vendor</strong></td>
+                <td>No</td>
+            </tr>
+        </table>
+	</content>
+</makedocs>

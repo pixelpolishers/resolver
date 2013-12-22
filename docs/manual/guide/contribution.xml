@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+        <h1>Contributors Guide</h1>
+        <p>
+            To contribute to the <a href="https://github.com/pixelpolishers/resolver">Resolver project</a>
+            one needs to fork the repository. This repository is located at
+            <a href="https://github.com/pixelpolishers/resolver">Github</a>.
+        </p>
+
+        <h2>Fixing Bugs</h2>
+        <p>
+            Did you find a bug? Please submit a pull request. To submit a pull request we follow a
+            strict guideline.
+        </p>
+        <p>
+            If you do not have a fork yet, fork the repository and add a remote to the repository:
+        </p>
+        <p>
+            <code>
+git clone git@github.com:&lt;Your Username>/resolver.git
+cd resolver
+git remote add upstream git@github.com:pixelpolishers/resolver.git
+            </code>
+        </p>
+        <p>
+            Next pull the latest changes:
+        </p>
+        <p>
+            <code>
+git checkout master
+git pull upstream master
+git push origin
+            </code>
+        </p>
+        <p>
+            Now create a branch, you will be doing your changes in there:
+        </p>
+        <p>
+            <code>git checkout -b hotfix/&lt;issue id></code>
+        </p>
+
+        <h2>Adding Features</h2>
+        <p>
+            Adding new features is much appreciated. Please submit a pull request in order for your
+            feature request to be evaluated.<br />
+            This works pretty much the same as fixing bugs. First of all you need the repository:
+        </p>
+        <p>
+            <code>
+git clone git@github.com:&lt;Your Username>/resolver.git
+cd resolver
+git remote add upstream git@github.com:pixelpolishers/resolver.git
+            </code>
+        </p>
+        <p>
+            Next pull the latest changes. All new features should be based on the latest development
+            branch which is called "develop".
+        </p>
+        <p>
+            <code>
+git checkout develop
+git pull upstream develop
+git push origin
+            </code>
+        </p>
+        <p>
+            Now create a branch, you will be doing your changes in there:
+        </p>
+        <p>
+            <code>git checkout -b feature/&lt;your feature></code>
+        </p>
+	</content>
+</makedocs>

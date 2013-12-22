@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+		<h1>Configuration</h1>
+        <p>
+            The configuration type is an object that defines the representation of an IDE project
+            configuration.
+        </p>
+
+        <h2>Members</h2>
+
+        <table>
+            <tr>
+                <th>Member</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Required</th>
+            </tr>
+            <tr>
+                <td>debug</td>
+                <td>bool</td>
+                <td>Whether or not this is a debug configuration.</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>The name of the configuration.</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>platform</td>
+                <td><a href="reference/type/platform">Platform</a></td>
+                <td>The platform that this configuration is configured for.</td>
+                <td>No</td>
+            </tr>
+        </table>
+	</content>
+</makedocs>

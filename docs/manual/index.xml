@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+        <h1>Resolver</h1>
+
+        <p>Welcome to the documentation of Resolver!</p>
+
+        <p>
+            Resolver is a C++ dependency manager and makefile generator. When using Resolver one's
+            does not have to worry about downloading the correct dependencies.
+        </p>
+	</content>
+</makedocs>

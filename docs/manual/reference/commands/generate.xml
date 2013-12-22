@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+        <h2>generate</h2>
+        <p>
+            Generates IDE project files depending on your project configuration.
+        </p>
+
+        <h3>Usage</h3>
+        <p>
+            <code>resolver [options] generate [ide]</code>
+        </p>
+
+        <h3>Arguments and Options</h3>
+        <table>
+            <tr>
+                <td>-w [path]</td>
+                <td>--working-dir [path]</td>
+                <td>Makes it possible to specify the working directory to execute in.</td>
+            </tr>
+            <tr>
+                <td>-s</td>
+                <td>--silent</td>
+                <td>Disables all log messages</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>[ide]</td>
+                <td>The IDE to generate the project files for. Current supported IDE's are:
+                    <list>
+                        <li>vs2010</li>
+                    </list>
+                </td>
+            </tr>
+        </table>
+
+        <h3>Exit Code</h3>
+        <p>
+            This command will exit with the code 0 when it succeeds; 1 in case of an error.
+        </p>
+	</content>
+</makedocs>

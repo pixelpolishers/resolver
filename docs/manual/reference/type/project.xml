@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+		<h1>Project</h1>
+        <p>
+            The project data type represents a project within the IDE.
+        </p>
+	</content>
+</makedocs>

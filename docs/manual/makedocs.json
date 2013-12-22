@@ -1,0 +1,12 @@
+{
+    "name": "Resolver",
+    "toc": [
+        "index",
+        "guide/installation",
+        "guide/contribution",
+        "reference/config",
+        "reference/commands"
+    ],
+    "github": "https://github.com/pixelpolishers/resolver",
+    "googleAnalytics": "UA-24334073-1"
+}

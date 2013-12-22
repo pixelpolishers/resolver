@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+        <h1>Installation Guide</h1>
+        <p>
+            Resolver can be installed using Node's package manager <a href="https://npmjs.org">NPM</a>.
+        </p>
+        <p>
+            <code>npm install -g pixelpolishers-resolver</code>
+        </p>
+	</content>
+</makedocs>
