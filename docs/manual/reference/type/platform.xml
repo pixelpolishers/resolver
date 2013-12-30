@@ -3,7 +3,8 @@
 	<content>
 		<h1>Platform</h1>
         <p>
-            The project data type represents a project within the IDE.
+            The project data type represents a project within the IDE. This is an enumeration and
+            should be one of the following values: win32, win64
         </p>
 	</content>
 </makedocs>
