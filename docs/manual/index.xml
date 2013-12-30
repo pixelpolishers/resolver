@@ -6,7 +6,7 @@
         <p>Welcome to the documentation of Resolver!</p>
 
         <p>
-            Resolver is a C++ dependency manager and makefile generator. When using Resolver one's
+            Resolver is a C++ dependency manager and makefile generator. When using Resolver one
             does not have to worry about downloading the correct dependencies.
         </p>
 	</content>
