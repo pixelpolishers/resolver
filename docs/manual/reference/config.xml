@@ -26,6 +26,10 @@
                 <td>An object containing members describing a project's configuration.</td>
             </tr>
             <tr>
+                <td><a href="reference/type/platform">Platform</a></td>
+                <td>A enumeration defining the platform.</td>
+            </tr>
+            <tr>
                 <td><a href="reference/type/project">Project</a></td>
                 <td>An object containing members describing a project.</td>
             </tr>
