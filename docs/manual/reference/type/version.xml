@@ -4,7 +4,7 @@
 		<h1>Version</h1>
         <p>
             A version type is a string containing a Semantic Version. More information about
-            semantic versioning can be found here: <a href="http://semver.org/">http://semver.org</a>
+            semantic versioning can be found here: <a href="http://semver.org/">http://semver.org</a>.
         </p>
 	</content>
 </makedocs>
