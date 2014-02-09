@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <makedocs>
 	<content>
-		<h1>Project</h1>
+		<h1>Version</h1>
         <p>
-            The project data type represents a project within the IDE. It contains all configuration settings that are needed to compile
-			a project or to properly generate IDE files.
+            A version type is a string containing a Semantic Version. More information about
+            semantic versioning can be found here: <a href="http://semver.org/">http://semver.org</a>
         </p>
 	</content>
 </makedocs>
