@@ -39,6 +39,12 @@
                 </td>
                 <td>An object containing members describing a project.</td>
             </tr>
+            <tr>
+                <td>
+                    <a href="reference/type/version">Version</a>
+                </td>
+                <td>A string containing a semantic version.</td>
+            </tr>
         </table>
 
         <h2>Root Members</h2>
