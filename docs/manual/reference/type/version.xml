@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+		<h1>Project</h1>
+        <p>
+            The project data type represents a project within the IDE. It contains all configuration settings that are needed to compile
+			a project or to properly generate IDE files.
+        </p>
+	</content>
+</makedocs>
