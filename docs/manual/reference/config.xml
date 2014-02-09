@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <makedocs>
-	<content>
+    <content>
         <h1>Configuration Reference</h1>
 
         <h2>Introduction</h2>
@@ -22,15 +22,21 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td><a href="reference/type/configuration">Configuration</a></td>
+                <td>
+                    <a href="reference/type/configuration">Configuration</a>
+                </td>
                 <td>An object containing members describing a project's configuration.</td>
             </tr>
             <tr>
-                <td><a href="reference/type/platform">Platform</a></td>
+                <td>
+                    <a href="reference/type/platform">Platform</a>
+                </td>
                 <td>A enumeration defining the platform.</td>
             </tr>
             <tr>
-                <td><a href="reference/type/project">Project</a></td>
+                <td>
+                    <a href="reference/type/project">Project</a>
+                </td>
                 <td>An object containing members describing a project.</td>
             </tr>
         </table>
@@ -66,5 +72,5 @@
                 <td>No</td>
             </tr>
         </table>
-	</content>
+    </content>
 </makedocs>
