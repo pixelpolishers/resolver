@@ -45,7 +45,7 @@
             <tr>
                 <td>pch</td>
                 <td><a href="reference/type/pch">PrecompiledHeader</a></td>
-                <td>The precompiled header settings..</td>
+                <td>The precompiled header settings.</td>
                 <td>No</td>
             </tr>
             <tr>

@@ -95,8 +95,8 @@
             </tr>
             <tr>
                 <td>projects</td>
-                <td>array</td>
-                <td>The list with projects. This should be an array with objects of the type <a href="reference/type/project">Project</a></td>
+                <td><a href="reference/type/project">Project</a>[]</td>
+                <td>The array with projects.</td>
                 <td>No</td>
             </tr>
             <tr>
