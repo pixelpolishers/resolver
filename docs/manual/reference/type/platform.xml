@@ -16,11 +16,11 @@
             </tr>
             <tr>
                 <td>win32</td>
-                <td>Describes a Windows 32-bit platform.</td>
+                <td>Describes a 32-bit Windows platform.</td>
             </tr>
             <tr>
                 <td>win64</td>
-                <td>Describes a Windows 64-bit platform.</td>
+                <td>Describes a 64-bit Windows platform.</td>
             </tr>
         </table>
     </content>
