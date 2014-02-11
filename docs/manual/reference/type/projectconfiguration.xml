@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<makedocs>
+    <content>
+        <h1>ProjectConfiguration</h1>
+        <p>
+            A ProjectConfiguration type represents a type that describes an IDE's project
+            configuration. It contains the following members:
+        </p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>The name of the configuration (e.g. Debug, Release, etc.).</td>
+            </tr>
+            <tr>
+                <td>outputPath</td>
+                <td>The file or directory to output the compiled binary to.</td>
+            </tr>
+            <tr>
+                <td>dependencies</td>
+                <td>
+                    A list with project specific dependencies. This is an array with
+                    <a href="reference/type/projectdependency">ProjectDependency</a> types.
+                </td>
+            </tr>
+        </table>
+    </content>
+</makedocs>

@@ -34,9 +34,9 @@
                 <td>Yes</td>
             </tr>
             <tr>
-                <td>projects</td>
+                <td>configurations</td>
                 <td>array</td>
-                <td>The list with projects. This should be an array with objects of the type <a href="reference/type/project">Project</a></td>
+                <td>The list with configurations. This should be an array with objects of the type <a href="reference/type/projectconfiguration">ProjectConfiguration</a></td>
                 <td>No</td>
             </tr>
             <tr>

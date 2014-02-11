@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<makedocs>
+    <content>
+        <h1>ProjectDependency</h1>
+        <p>
+            A project dependency can either be the string "default" to include the system's
+            dependencies. It can also be an object containing a "name" key and a "config" key which
+            describe the dependency and the configuration name.
+        </p>
+
+        <h2>Example</h2>
+
+<code>"dependencies": [
+    "default",
+    {
+        "name": "pixelpolishers/my-project",
+        "config": "Release"
+    }
+],</code>
+    </content>
+</makedocs>
