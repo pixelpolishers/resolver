@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <td>type</td>
-                <td><a href="reference/type/project-type">ProjectType</a></td>
+                <td><a href="reference/type/projecttype">ProjectType</a></td>
                 <td>The type of the project. This is an enumeration.</td>
                 <td>Yes</td>
             </tr>

@@ -41,7 +41,7 @@
             </tr>
             <tr>
                 <td>
-                    <a href="reference/type/project-type">ProjectType</a>
+                    <a href="reference/type/projecttype">ProjectType</a>
                 </td>
                 <td>An enumeration defining the IDE project type.</td>
             </tr>
