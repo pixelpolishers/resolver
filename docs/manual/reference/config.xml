@@ -35,6 +35,12 @@
             </tr>
             <tr>
                 <td>
+                    <a href="reference/type/pch">PrecompiledHeader</a>
+                </td>
+                <td>The precompiled header settings.</td>
+            </tr>
+            <tr>
+                <td>
                     <a href="reference/type/project">Project</a>
                 </td>
                 <td>An object containing members describing a project.</td>

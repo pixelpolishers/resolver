@@ -43,6 +43,12 @@
                 <td>Yes</td>
             </tr>
             <tr>
+                <td>pch</td>
+                <td><a href="reference/type/pch">PrecompiledHeader</a></td>
+                <td>The precompiled header settings..</td>
+                <td>No</td>
+            </tr>
+            <tr>
                 <td>platform</td>
                 <td><a href="reference/type/platform">Platform</a></td>
                 <td>The platform that this configuration is configured for.</td>
