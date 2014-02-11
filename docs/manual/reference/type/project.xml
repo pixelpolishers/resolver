@@ -20,6 +20,12 @@
                 <th>Required</th>
             </tr>
             <tr>
+                <td>configurations</td>
+                <td><a href="reference/type/configuration">Configuration</a>[]</td>
+                <td>The list with configurations.</td>
+                <td>No</td>
+            </tr>
+            <tr>
                 <td>name</td>
                 <td>string</td>
                 <td>
@@ -28,16 +34,16 @@
                 <td>Yes</td>
             </tr>
             <tr>
+                <td>source</td>
+                <td><a href="reference/type/source">Source</a></td>
+                <td>The project's source</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
                 <td>type</td>
                 <td><a href="reference/type/projecttype">ProjectType</a></td>
                 <td>The type of the project. This is an enumeration.</td>
                 <td>Yes</td>
-            </tr>
-            <tr>
-                <td>configurations</td>
-                <td><a href="reference/type/configuration">Configuration</a>[]</td>
-                <td>The list with configurations.</td>
-                <td>No</td>
             </tr>
             <tr>
                 <td>vendor</td>

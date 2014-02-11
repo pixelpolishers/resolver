@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+		<h1>Source</h1>
+        <p>
+            The Source type is an object containing the following members:
+        </p>
+
+        <h2>Members</h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Required</th>
+            </tr>
+            <tr>
+                <td>extensions</td>
+                <td>string[]</td>
+                <td>A list with extensions to add to this filter.</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>files</td>
+                <td>string[]</td>
+                <td>A list with files to add.</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>The name of this source definition. This is used to create filters in the IDE.</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>paths</td>
+                <td>string[]</td>
+                <td>A list with directories to include source files from.</td>
+                <td>No</td>
+            </tr>
+        </table>
+	</content>
+</makedocs>
