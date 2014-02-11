@@ -43,6 +43,12 @@
                 <td>Yes</td>
             </tr>
             <tr>
+                <td>paths</td>
+                <td><a href="reference/type/paths">Paths</a></td>
+                <td>The map with all paths.</td>
+                <td>No</td>
+            </tr>
+            <tr>
                 <td>pch</td>
                 <td><a href="reference/type/pch">PrecompiledHeader</a></td>
                 <td>The precompiled header settings.</td>

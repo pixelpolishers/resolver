@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<makedocs>
+	<content>
+		<h1>Paths</h1>
+        <p>
+            The Paths type is an object containing the following members:
+        </p>
+
+        <h2>Members</h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Required</th>
+            </tr>
+            <tr>
+                <td>include</td>
+                <td>string[]</td>
+                <td>Describes a list with include paths.</td>
+                <td>No</td>
+            </tr>
+        </table>
+	</content>
+</makedocs>

@@ -4,7 +4,24 @@
         <h1>Platform</h1>
         <p>
             The project data type represents a project within the IDE. This is an enumeration and
-            should be one of the following values: win32, win64.
+            should be one of the following values.
         </p>
+
+        <h2>Values</h2>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>win32</td>
+                <td>Describes a Windows 32-bit platform.</td>
+            </tr>
+            <tr>
+                <td>win64</td>
+                <td>Describes a Windows 64-bit platform.</td>
+            </tr>
+        </table>
     </content>
 </makedocs>
