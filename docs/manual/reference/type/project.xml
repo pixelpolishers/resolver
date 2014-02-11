@@ -36,7 +36,7 @@
             <tr>
                 <td>configurations</td>
                 <td>array</td>
-                <td>The list with configurations. This should be an array with objects of the type <a href="reference/type/projectconfiguration">ProjectConfiguration</a></td>
+                <td>The list with configurations. This should be an array with objects of the type <a href="reference/type/configuration">Configuration</a></td>
                 <td>No</td>
             </tr>
             <tr>

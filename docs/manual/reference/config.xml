@@ -41,12 +41,6 @@
             </tr>
             <tr>
                 <td>
-                    <a href="reference/type/projectconfiguration">ProjectConfiguration</a>
-                </td>
-                <td>A type describing an IDE project's configuration.</td>
-            </tr>
-            <tr>
-                <td>
                     <a href="reference/type/projectdependency">ProjectDependency</a>
                 </td>
                 <td>A type describing an IDE project's dependency.</td>
