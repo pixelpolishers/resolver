@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<makedocs>
+    <content>
+        <h1>ProjectType</h1>
+        <p>
+            The type of a project. This should be one of the following values:
+        </p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>application</td>
+                <td>The project represents an application.</td>
+            </tr>
+            <tr>
+                <td>dynamic-library</td>
+                <td>The project represents a dynamic library (.dll or .so)</td>
+            </tr>
+            <tr>
+                <td>static-library</td>
+                <td>The project represents a static library (.lib or .a)</td>
+            </tr>
+        </table>
+    </content>
+</makedocs>

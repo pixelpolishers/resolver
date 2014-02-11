@@ -3,8 +3,48 @@
 	<content>
 		<h1>Project</h1>
         <p>
-            The project data type represents a project within the IDE. It contains all configuration settings that are needed to compile
-			a project or to properly generate IDE files.
+            The project data type represents a project within the IDE. It contains all configuration
+            settings that are needed to compile a project or to properly generate IDE files.
         </p>
+
+        <h2>Members</h2>
+        <p>
+            The members of the project type.
+        </p>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Required</th>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>string</td>
+                <td>
+                    The name of the project.
+                </td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td><a href="reference/type/project-type">ProjectType</a></td>
+                <td>The type of the project. This is an enumeration.</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>projects</td>
+                <td>array</td>
+                <td>The list with projects. This should be an array with objects of the type <a href="reference/type/project">Project</a></td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>vendor</td>
+                <td>string</td>
+                <td>The path of the directory to store the dependencies in. The default value is <strong>vendor</strong></td>
+                <td>No</td>
+            </tr>
+        </table>
 	</content>
 </makedocs>
