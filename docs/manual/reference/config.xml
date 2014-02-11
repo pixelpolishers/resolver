@@ -41,6 +41,12 @@
             </tr>
             <tr>
                 <td>
+                    <a href="reference/type/project-type">ProjectType</a>
+                </td>
+                <td>An object containing members describing a project.</td>
+            </tr>
+            <tr>
+                <td>
                     <a href="reference/type/version">Version</a>
                 </td>
                 <td>A string containing a semantic version.</td>
