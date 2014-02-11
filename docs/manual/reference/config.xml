@@ -43,7 +43,7 @@
                 <td>
                     <a href="reference/type/project-type">ProjectType</a>
                 </td>
-                <td>An object containing members describing a project.</td>
+                <td>An enumeration defining the IDE project type.</td>
             </tr>
             <tr>
                 <td>
