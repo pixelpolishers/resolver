@@ -24,9 +24,9 @@
             </tr>
             <tr>
                 <td>dependencies</td>
+                <td><a href="reference/type/projectdependency">ProjectDependency</a>[]</td>
                 <td>
-                    A list with project specific dependencies. This is an array with
-                    <a href="reference/type/projectdependency">ProjectDependency</a> types.
+                    A list with project specific dependencies.
                 </td>
                 <td>No</td>
             </tr>
@@ -38,6 +38,7 @@
             </tr>
             <tr>
                 <td>outputPath</td>
+                <td>string</td>
                 <td>The file or directory to output the compiled binary to.</td>
                 <td>Yes</td>
             </tr>
