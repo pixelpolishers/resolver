@@ -1,6 +1,6 @@
 {
     "name": "pixelpolishers-resolver",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "license": "MIT",
     "author": "Pixel Polishers",
     "keywords": [
@@ -21,7 +21,7 @@
         "xmlbuilder": "*"
     },
     "bin": {
-        "resolve": "./bin/resolve",
+        "resolve": "./bin/resolver",
         "yuidoc": "./node_modules/bin/yuidoc"
     },
     "directories": {
