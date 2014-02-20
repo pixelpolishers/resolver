@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 
-require('./../lib/application').run();
+var Class = require('./../lib/application').Class;
+(new Class).run();
