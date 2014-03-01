@@ -1,7 +1,7 @@
 resolver
 ========
 
-An open source C++ dependency manager.
+Resolver is a C++ dependency manager and makefile generator. When using Resolver one does not have to worry about downloading the correct dependencies. Resolver will download all needed dependencies, compile them and setup the IDE projects. All automatically.
 
 ### Build Status
 
