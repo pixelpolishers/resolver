@@ -6,5 +6,9 @@ notifications:
   irc: irc.freenode.org#pixelpolishers
 deploy:
   provider: npm
+  email: ''
   api_key:
-    secure: E+sGUFMNUSHs+qPU0xw9+MgLfBx0mm2CWjIHisQUxszeMP9NVNRccg+qm1gUpkMdMIagWtjZ8uFEbm7GD1OmQpxiwXZ9sHDtefjGGw+pb+unvhzYhDyXvyDyoJ14VTtS5lVT6U1TjiMWMW38bUTVifm56fci9acVAtYUDpGYZ5c=
+    secure: AE+dg2Ttqhog9UN2k66t0fcyCICmeokkSNw3loFFoq/STxV9L6kN16pLHZqJreysOrQUcvlJCtZBLParThQ4YQ5vCNV7wsdab7+QoijvctKad7w2BNuI4JjTyFeXNEDijSbeEWNDOTeGXvhYsEcElISCXQfwOA0By6pgbS9pnkM=
+  on:
+    repo: pixelpolishers/resolver
+    branch: develop
