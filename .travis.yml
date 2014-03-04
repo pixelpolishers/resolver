@@ -8,7 +8,13 @@ language: node_js
 node_js:
     - 0.10
     - 0.11
-    
+
 # Once building is done we notify everyone:
 notifications:
     irc: "irc.freenode.org#pixelpolishers"
+
+deploy:
+    provider: npm
+	email: "walter.tamboer@live.com"
+    api_key: "C+/f7GZIWiB51xvm73WkcSW6xjW4KWzwgOirTRFBqBrRLzdQCyCbYhxXfyXnEaP6drVlBsLj3Vs+VWwn2/bNS7NEqOnRTMqv22c1ywG1EdEUSoYREHLILp0Hq80XruLx48mBvsl2cnm+iY5yrDkRRV574hEyBA3pyiun3QdF3cQ="
+	
