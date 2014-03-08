@@ -6,7 +6,6 @@ notifications:
   irc: irc.freenode.org#pixelpolishers
 deploy:
   provider: npm
-  email: ''
   api_key:
     secure: AE+dg2Ttqhog9UN2k66t0fcyCICmeokkSNw3loFFoq/STxV9L6kN16pLHZqJreysOrQUcvlJCtZBLParThQ4YQ5vCNV7wsdab7+QoijvctKad7w2BNuI4JjTyFeXNEDijSbeEWNDOTeGXvhYsEcElISCXQfwOA0By6pgbS9pnkM=
   on:
