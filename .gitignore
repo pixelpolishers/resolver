@@ -6,6 +6,7 @@ vendor/
 box.phar
 resolver.phar
 resolver.phar.pubkey
+resolver.phar.version
 
 # Ignore the SSL related files
 phar-private.pem.passphrase-protected
