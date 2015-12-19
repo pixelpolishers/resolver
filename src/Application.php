@@ -5,6 +5,7 @@ namespace PixelPolishers\Resolver;
 use PixelPolishers\Resolver\Command\Compile;
 use PixelPolishers\Resolver\Command\Generate;
 use PixelPolishers\Resolver\Command\Install;
+use PixelPolishers\Resolver\Command\SelfUpdate;
 use PixelPolishers\Resolver\Command\Update;
 use PixelPolishers\Resolver\Command\Validate;
 use Symfony\Component\Console\Application as BaseApplication;
@@ -51,6 +52,7 @@ class Application extends BaseApplication
         $commands[] = new Compile();
         $commands[] = new Generate();
         $commands[] = new Install();
+        $commands[] = new SelfUpdate();
         $commands[] = new Update();
         $commands[] = new Validate();
 
