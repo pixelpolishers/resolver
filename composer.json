@@ -1,0 +1,23 @@
+{
+    "name": "pixelpolishers/resolver",
+    "description": "A dependency resolver and IDE project generator.",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "PixelPolishers\\Resolver\\": "src/"
+        }
+    },
+    "require": {
+        "composer/semver": "~1.2",
+        "composer/spdx-licenses": "~1.1",
+        "justinrainbow/json-schema": "~1.5",
+        "seld/jsonlint": "~1.4",
+        "symfony/console": "~3.0",
+        "symfony/finder": "~3.0",
+        "symfony/process": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5"
+    }
+}

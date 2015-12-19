@@ -1,0 +1,4 @@
+build/
+vendor/
+resolver.phar
+resolver.phar.pubkey
