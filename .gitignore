@@ -1,4 +1,12 @@
+# Ignored directories
 build/
 vendor/
+
+# Ignored files
+box.phar
 resolver.phar
 resolver.phar.pubkey
+
+# Ignore the SSL related files
+phar-private.pem.passphrase-protected
+phar-private-nopassphrase.pem
