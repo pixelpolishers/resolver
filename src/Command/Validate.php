@@ -26,6 +26,7 @@ class Validate extends AbstractCommand
         }
 
         if (!is_file($path)) {
+            $path = getcwd() . DIRECTORY_SEPARATOR . $path;
             $output->writeln(sprintf('<error>The file "%s" does not exists.</error>', $path));
             return 1;
         }
