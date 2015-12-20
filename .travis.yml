@@ -18,8 +18,6 @@ matrix:
 before_install:
 - openssl aes-256-cbc -K $encrypted_6dce21a6bfd4_key -iv $encrypted_6dce21a6bfd4_iv
   -in .travis/secrets.tar.enc -out .travis/secrets.tar -d
-- openssl aes-256-cbc -K $encrypted_d277d4c7314e_key -iv $encrypted_d277d4c7314e_iv
-  -in .travis/secrets.tar.enc -out .travis/secrets.tar -d
 - phpenv config-rm xdebug.ini
 - composer self-update
 install:
