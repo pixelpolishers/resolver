@@ -22,11 +22,10 @@ class Validate extends AbstractCommand
     {
         $path = $input->getArgument('path');
         if (!$path) {
-            $path = 'resolver.json';
+            $path = getcwd() . DIRECTORY_SEPARATOR . 'resolver.json';
         }
 
         if (!is_file($path)) {
-            $path = getcwd() . DIRECTORY_SEPARATOR . $path;
             $output->writeln(sprintf('<error>The file "%s" does not exists.</error>', $path));
             return 1;
         }
