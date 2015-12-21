@@ -3,7 +3,8 @@
   "chmod": "0755",
   "compression": "GZ",
   "directories": [
-    "src"
+    "src",
+    "resources"
   ],
   "files": [
     "LICENSE.md"
