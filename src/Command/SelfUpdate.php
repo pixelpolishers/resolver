@@ -10,6 +10,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class SelfUpdate extends AbstractCommand
 {
+    const PHAR_URL = 'https://pixelpolishers.github.io/resolver/resolver.phar';
+    const PHAR_VERSION_URL = 'https://pixelpolishers.github.io/resolver/resolver.phar.version';
+
     protected function configure()
     {
         $this->setName('self-update');
@@ -25,11 +28,19 @@ class SelfUpdate extends AbstractCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        if (PHP_VERSION_ID < 50600) {
+            $message = 'Self updating is not available in PHP versions under 5.6.' . "\n";
+            $message .= 'The latest version can be found at ' . self::PHAR_URL;
+
+            $output->writeln(sprintf('<error>%s</error>', $message));
+            return 1;
+        }
+
         $exitCode = 0;
 
         $updater = new Updater();
-        $updater->getStrategy()->setPharUrl('https://pixelpolishers.github.io/resolver/resolver.phar');
-        $updater->getStrategy()->setVersionUrl('https://pixelpolishers.github.io/resolver/resolver.phar.version');
+        $updater->getStrategy()->setPharUrl(self::PHAR_URL);
+        $updater->getStrategy()->setVersionUrl(self::PHAR_VERSION_URL);
 
         try {
             if ($input->getOption('rollback')) {
@@ -46,7 +57,6 @@ class SelfUpdate extends AbstractCommand
             } else {
                 $exitCode = 1;
             }
-
         } catch (Exception $e) {
             $exitCode = 1;
 
