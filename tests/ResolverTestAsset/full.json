@@ -1,0 +1,31 @@
+{
+    "name": "vendor/name",
+    "definitions": [
+        "test1",
+        "test2"
+    ],
+    "description": "description",
+    "license": "MIT",
+    "projects-dir": "my-projects",
+    "vendor-dir": "my-vendor",
+    "projects": [
+        {
+            "name": "project1"
+        },
+        {
+            "name": "project2"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "repository",
+            "param1": "value1",
+            "param2": "value2"
+        },
+        {
+            "type": "repository",
+            "param1": "value1",
+            "param2": "value2"
+        }
+    ]
+}

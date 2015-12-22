@@ -1,0 +1,9 @@
+{
+    "name": "vendor/name",
+    "repositories": [
+        {
+            "param1": "value1",
+            "param2": "value2"
+        }
+    ]
+}

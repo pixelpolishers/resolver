@@ -41,6 +41,10 @@ abstract class AbstractReader implements ReaderInterface
             throw new RuntimeException('The name property is not set.');
         }
 
+        if (strpos($data['name'], '/') === false) {
+            throw new RuntimeException('Invalid name, missing vendor.');
+        }
+
         list($vendor, $name) = explode('/', $data['name'], 2);
 
         $config->setName($name);

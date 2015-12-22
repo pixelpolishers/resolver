@@ -59,6 +59,7 @@ class Config implements ConfigInterface
     {
         $this->vendorDirectory = 'vendor';
         $this->projectsDirectory = 'projects';
+        $this->projects = [];
     }
 
     /**
@@ -90,7 +91,7 @@ class Config implements ConfigInterface
      */
     public function setHideSolutionNode($hideSolutionNode)
     {
-        $this->hideSolutionNode = $hideSolutionNode;
+        $this->hideSolutionNode = $hideSolutionNode === true || $hideSolutionNode === 'true';
     }
 
     /**
