@@ -20,3 +20,8 @@ key must not be changed. Once downloaded, make the the PHAR file executable.
 
 **Pro-Tip:** Put both files in a directory that is on your $PATH. Than create the alias *resolver* to the phar so you 
 can easily execute it from anywhere on your system.
+
+## Documentation
+
+Have a look at the Wiki for the Resolver documentation:
+https://github.com/pixelpolishers/resolver/wiki
