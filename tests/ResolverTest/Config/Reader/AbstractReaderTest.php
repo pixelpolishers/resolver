@@ -191,8 +191,7 @@ class AbstractReaderTest extends PHPUnit_Framework_TestCase
                             'definitions' => ['a', 'b', 'c'],
                             'intermediate-dir' => 'my-intermediate',
                             'name' => 'my-name',
-                            'output-name' => 'my-output-name',
-                            'output-ext' => 'my-output-ext',
+                            'output' => 'my-output-name',
                             'paths' => [
                                 'exclude' => ['my-exclude'],
                                 'executable' => ['my-executable'],
@@ -219,7 +218,6 @@ class AbstractReaderTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('my-intermediate', $configuration->getIntermediateDirectory());
         $this->assertEquals('my-name', $configuration->getName());
         $this->assertEquals('my-output-name', $configuration->getOutputPath());
-        $this->assertEquals('my-output-ext', $configuration->getOutputExtension());
         $this->assertEquals('win32', $configuration->getPlatform());
         $this->assertEquals(4, $configuration->getWarningLevel());
     }
