@@ -32,6 +32,14 @@ class Application extends BaseApplication
             $output->writeln('');
         }
 
+        if ($this->checkNewerVersion()) {
+            $output->writeln(sprintf(
+                '<error>%s</error>',
+                'A new version of Resolver is available, run `resolver self-update` to update to the latest version.'
+            ));
+            $output->writeln('');
+        }
+
         $oldWorkingDir = getcwd();
         $newWorkingDir = $this->getNewWorkingDir($input);
 
@@ -81,5 +89,16 @@ class Application extends BaseApplication
         }
 
         return $workingDir;
+    }
+
+    private function checkNewerVersion()
+    {
+        if (self::VERSION === '@' . 'package_version' . '@') {
+            return true;
+        }
+        
+        $content = humbug_get_contents('https://pixelpolishers.github.com/resolver/resolver.phar.version');
+
+        return substr($content, 0, 40) !== self::VERSION;
     }
 }
