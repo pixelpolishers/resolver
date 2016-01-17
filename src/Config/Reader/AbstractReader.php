@@ -24,6 +24,11 @@ abstract class AbstractReader implements ReaderInterface
             throw new InvalidArgumentException(sprintf('The path "%s" does not exists.', $path));
         }
 
+        return $this->readFile($path);
+    }
+
+    protected function readFile($path)
+    {
         $data = $this->parseContent($path);
 
         $config = new Config();
@@ -41,6 +46,28 @@ abstract class AbstractReader implements ReaderInterface
             throw new RuntimeException('The name property is not set.');
         }
 
+        $this->parseName($config, $data);
+        $this->parseDefinitions($config, $data);
+        $this->parseDescription($config, $data);
+        $this->parseLicense($config, $data);
+        $this->parseProjectsDirectory($config, $data);
+        $this->parseVendorDirectory($config, $data);
+
+        if (array_key_exists('projects', $data)) {
+            $projects = $this->parseProjects($data['projects']);
+
+            $config->setProjects($projects);
+        }
+
+        if (array_key_exists('repositories', $data)) {
+            $repositories = $this->parseRepositories($data['repositories']);
+
+            $config->setRepositories($repositories);
+        }
+    }
+
+    protected function parseName(Config $config, $data)
+    {
         if (strpos($data['name'], '/') === false) {
             throw new RuntimeException('Invalid name, missing vendor.');
         }
@@ -49,35 +76,38 @@ abstract class AbstractReader implements ReaderInterface
 
         $config->setName($name);
         $config->setVendor($vendor);
+    }
 
+    protected function parseDefinitions(Config $config, $data)
+    {
         if (array_key_exists('definitions', $data)) {
             $config->setDefinitions($data['definitions']);
         }
+    }
 
+    protected function parseDescription(Config $config, $data)
+    {
         if (array_key_exists('description', $data)) {
             $config->setDescription($data['description']);
         }
+    }
 
+    protected function parseLicense(Config $config, $data)
+    {
         if (array_key_exists('license', $data)) {
             $config->setLicense($data['license']);
         }
+    }
 
-        if (array_key_exists('projects', $data)) {
-            $projects = $this->parseProjects($data['projects']);
-
-            $config->setProjects($projects);
-        }
-
+    protected function parseProjectsDirectory(Config $config, $data)
+    {
         if (array_key_exists('projects-dir', $data)) {
             $config->setProjectsDirectory($data['projects-dir']);
         }
+    }
 
-        if (array_key_exists('repositories', $data)) {
-            $repositories = $this->parseRepositories($data['repositories']);
-
-            $config->setRepositories($repositories);
-        }
-
+    protected function parseVendorDirectory(Config $config, $data)
+    {
         if (array_key_exists('vendor-dir', $data)) {
             $config->setVendorDirectory($data['vendor-dir']);
         }
@@ -90,66 +120,107 @@ abstract class AbstractReader implements ReaderInterface
         foreach ($projects as $data) {
             $project = new Project();
 
-            if (array_key_exists('configurations', $data)) {
-                $configurations = $this->parseProjectConfigurations($project, $data['configurations']);
-
-                $project->setConfigurations($configurations);
-            }
-
-            if (array_key_exists('definitions', $data)) {
-                $project->setDefinitions($data['definitions']);
-            }
-
-            if (array_key_exists('dependencies', $data)) {
-                $dependencies = $this->parseProjectDependencies($data['dependencies']);
-
-                $project->setDependencies($dependencies);
-            }
-
-            if (array_key_exists('dependencies-dev', $data)) {
-                $dependencies = $this->parseProjectDependencies($data['dependencies-dev']);
-
-                $project->setDevelopmentDependencies($dependencies);
-            }
-
-            if (array_key_exists('name', $data)) {
-                $project->setName($data['name']);
-            }
-
-            if (array_key_exists('paths', $data)) {
-                $paths = $this->parsePaths($data['paths']);
-
-                $project->setPaths($paths);
-            }
-
-            if (array_key_exists('pch', $data)) {
-                $pch = $this->parsePrecompiledHeader($data['pch']);
-
-                $project->setPrecompiledHeader($pch);
-            }
-
-            if (array_key_exists('source', $data)) {
-                $source = $this->parseSource($data['source']);
-
-                $project->setSource($source);
-            }
-
-            if (array_key_exists('subsystem', $data)) {
-                $project->setSubsystem($data['subsystem']);
-            } else {
-                $project->setSubsystem(Subsystem::CONSOLE);
-            }
-
-            if (array_key_exists('type', $data)) {
-                $project->setType($data['type']);
-            } else {
-                $project->setType(ProjectType::APPLICATION);
-            }
+            $this->parseProjectConfigurationsData($project, $data);
+            $this->parseProjectDefinitions($project, $data);
+            $this->parseProjectDependenciesData($project, $data);
+            $this->parseProjectDevelopmentDependenciesData($project, $data);
+            $this->parseProjectName($project, $data);
+            $this->parseProjectPathsData($project, $data);
+            $this->parseProjectPrecompiledHeaderData($project, $data);
+            $this->parseProjectSourceData($project, $data);
+            $this->parseProjectSubsystem($project, $data);
+            $this->parseProjectType($project, $data);
 
             $projectList[] = $project;
         }
 
         return $projectList;
+    }
+
+    protected function parseProjectDependenciesData(Project $project, $data)
+    {
+        if (array_key_exists('dependencies', $data)) {
+            $dependencies = $this->parseProjectDependencies($data['dependencies']);
+
+            $project->setDependencies($dependencies);
+        }
+    }
+
+    protected function parseProjectDevelopmentDependenciesData(Project $project, $data)
+    {
+        if (array_key_exists('dependencies-dev', $data)) {
+            $dependencies = $this->parseProjectDependencies($data['dependencies-dev']);
+
+            $project->setDevelopmentDependencies($dependencies);
+        }
+    }
+
+    protected function parseProjectConfigurationsData(Project $project, $data)
+    {
+        if (array_key_exists('configurations', $data)) {
+            $configurations = $this->parseProjectConfigurations($project, $data['configurations']);
+
+            $project->setConfigurations($configurations);
+        }
+    }
+
+    protected function parseProjectDefinitions(Project $project, $data)
+    {
+        if (array_key_exists('definitions', $data)) {
+            $project->setDefinitions($data['definitions']);
+        }
+    }
+
+    protected function parseProjectName(Project $project, $data)
+    {
+        if (array_key_exists('name', $data)) {
+            $project->setName($data['name']);
+        }
+    }
+
+    protected function parseProjectPathsData(Project $project, $data)
+    {
+        if (array_key_exists('paths', $data)) {
+            $paths = $this->parsePaths($data['paths']);
+
+            $project->setPaths($paths);
+        }
+    }
+
+    protected function parseProjectPrecompiledHeaderData(Project $project, $data)
+    {
+        if (array_key_exists('pch', $data)) {
+            $pch = $this->parsePrecompiledHeader($data['pch']);
+
+            $project->setPrecompiledHeader($pch);
+        }
+    }
+
+    protected function parseProjectSourceData(Project $project, $data)
+    {
+        if (array_key_exists('source', $data)) {
+            $source = $this->parseSource($data['source']);
+
+            $project->setSource($source);
+        }
+    }
+
+    protected function parseProjectSubsystem(Project $project, $data)
+    {
+        if (array_key_exists('subsystem', $data)) {
+            $project->setSubsystem($data['subsystem']);
+        } else {
+            $project->setSubsystem(Subsystem::CONSOLE);
+        }
+    }
+
+    protected function parseProjectType(Project $project, $data)
+    {
+        if (array_key_exists('type', $data)) {
+            $project->setType($data['type']);
+        } else {
+            $project->setType(ProjectType::APPLICATION);
+        }
     }
 
     protected function parseRepositories($data)
@@ -202,12 +273,8 @@ abstract class AbstractReader implements ReaderInterface
                 $config->setName($data['name']);
             }
 
-            if (array_key_exists('output-name', $data)) {
-                $config->setOutputName($data['output-name']);
-            }
-
-            if (array_key_exists('output-ext', $data)) {
-                $config->setOutputExtension($data['output-ext']);
+            if (array_key_exists('output', $data)) {
+                $config->setOutputPath($data['output']);
             }
 
             if (array_key_exists('paths', $data)) {
@@ -258,9 +325,17 @@ abstract class AbstractReader implements ReaderInterface
         $result = [];
 
         foreach ($data as $config) {
-            $dependency = new Dependency($config['name'], $config['version']);
+            if (!array_key_exists('name', $config)) {
+                throw new InvalidArgumentException('Missing "name" for dependency.');
+            }
 
-            $result[] = $dependency;
+            if (!array_key_exists('version', $config)) {
+                throw new InvalidArgumentException('Missing "version" for dependency.');
+            }
+
+            $dependency =
+
+            $result[] = new Dependency($config['name'], $config['version']);
         }
 
         return $result;
@@ -328,10 +403,6 @@ abstract class AbstractReader implements ReaderInterface
             $source->setExtensions($data['extensions']);
         }
 
-        if (array_key_exists('files', $data)) {
-            $source->setFiles($data['files']);
-        }
-
         if (array_key_exists('name', $data)) {
             $source->setName($data['name']);
         }
@@ -346,8 +417,8 @@ abstract class AbstractReader implements ReaderInterface
             } else {
                 $sources = [];
 
-                foreach ($data['sources'] as $source) {
-                    $sources[] = $this->parseSource($souruce);
+                foreach ($data['sources'] as $sourceData) {
+                    $sources[] = $this->parseSource($sourceData);
                 }
 
                 $source->setSources($sources);

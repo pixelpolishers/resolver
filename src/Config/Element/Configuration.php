@@ -5,6 +5,7 @@ namespace PixelPolishers\Resolver\Config\Element;
 use PixelPolishers\Resolver\Config\Element\Traits\DefinitionsTrait;
 use PixelPolishers\Resolver\Config\Element\Traits\PathsTrait;
 use PixelPolishers\Resolver\Config\Element\Traits\PrecompiledHeaderTrait;
+use PixelPolishers\Resolver\Config\Type\Platform;
 
 class Configuration
 {
@@ -45,12 +46,7 @@ class Configuration
     /**
      * @var string
      */
-    private $outputName;
-
-    /**
-     * @var string
-     */
-    private $outputExtension;
+    private $outputPath;
 
     /**
      * @var string
@@ -61,6 +57,16 @@ class Configuration
      * @var int
      */
     private $warningLevel;
+
+    /**
+     * @var bool
+     */
+    private $warningsAsErrors;
+
+    /**
+     * @var bool
+     */
+    private $msvcErrorReport;
 
     /**
      * Initializes a new instance of this class.
@@ -164,33 +170,17 @@ class Configuration
     /**
      * @return string
      */
-    public function getOutputName()
+    public function getOutputPath()
     {
-        return $this->outputName;
+        return $this->outputPath;
     }
 
     /**
-     * @param string $outputName
+     * @param string $outputPath
      */
-    public function setOutputName($outputName)
+    public function setOutputPath($outputPath)
     {
-        $this->outputName = $outputName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOutputExtension()
-    {
-        return $this->outputExtension;
-    }
-
-    /**
-     * @param string $outputExtension
-     */
-    public function setOutputExtension($outputExtension)
-    {
-        $this->outputExtension = $outputExtension;
+        $this->outputPath = $outputPath;
     }
 
     /**
@@ -227,40 +217,56 @@ class Configuration
 
     public function getParsedExtension()
     {
-        $outputExt = null;
+        switch ($this->getProject()->getType()) {
+            case 'application':
+                $outputExt = Platform::isWindows($this->getPlatform()) ? 'exe' : '';
+                break;
 
-        if ($this->getOutputExtension()) {
-            $outputExt = trim($this->getOutputExtension(), '.');
-        } else if ($this->getPlatform() === 'linux') {
-            switch ($this->getProject()->getType()) {
-                case 'application':
-                    $outputExt = '';
-                    break;
+            case 'dynamic-library':
+                $outputExt = Platform::isWindows($this->getPlatform()) ? 'dll' : 'so';
+                break;
 
-                case 'dynamic-library':
-                    $outputExt = 'so';
-                    break;
+            case 'static-library':
+                $outputExt = Platform::isWindows($this->getPlatform()) ? 'lib' : 'a';
+                break;
 
-                case 'static-library':
-                    $outputExt = 'a';
-                    break;
-            }
-        } else {
-            switch ($this->getProject()->getType()) {
-                case 'application':
-                    $outputExt = 'exe';
-                    break;
-
-                case 'dynamic-library':
-                    $outputExt = 'dll';
-                    break;
-
-                case 'static-library':
-                    $outputExt = 'lib';
-                    break;
-            }
+            default:
+                $outputExt = null;
+                break;
         }
 
         return $outputExt;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getWarningsAsErrors()
+    {
+        return $this->warningsAsErrors;
+    }
+
+    /**
+     * @param boolean $warningsAsErrors
+     */
+    public function setWarningsAsErrors($warningsAsErrors)
+    {
+        $this->warningsAsErrors = $warningsAsErrors;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getMsvcErrorReport()
+    {
+        return $this->msvcErrorReport;
+    }
+
+    /**
+     * @param boolean $msvcErrorReport
+     */
+    public function setMsvcErrorReport($msvcErrorReport)
+    {
+        $this->msvcErrorReport = $msvcErrorReport;
     }
 }

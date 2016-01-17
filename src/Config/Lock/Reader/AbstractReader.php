@@ -23,6 +23,11 @@ abstract class AbstractReader implements ReaderInterface
             throw new InvalidArgumentException(sprintf('The path "%s" does not exists.', $path));
         }
 
+        return $this->readFile($path);
+    }
+
+    protected function readFile($path)
+    {
         $data = $this->parseContent($path);
 
         $config = new Config();

@@ -21,6 +21,8 @@ class FileSystem
         }
 
         mkdir($path, $mode, true);
+
+        clearstatcache();
     }
 
     public static function emptyDirectory($path)
@@ -35,6 +37,8 @@ class FileSystem
                 self::removeFile($file->getPathname());
             }
         }
+
+        clearstatcache();
     }
 
     public static function getRelativePath($fromPath, $toPath)
@@ -62,6 +66,8 @@ class FileSystem
     public static function rename($oldPath, $newPath)
     {
         rename($oldPath, $newPath);
+
+        clearstatcache();
     }
 
     public static function removeDirectory($path)
@@ -74,7 +80,11 @@ class FileSystem
 
     public static function removeFile($path)
     {
-        unlink($path);
+        if (is_file($path)) {
+            unlink($path);
+        }
+
+        clearstatcache();
     }
 
     public static function getDirectoryContent($path)

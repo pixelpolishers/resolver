@@ -327,7 +327,7 @@ abstract class AbstractProjectGenerator
 
         $outputExt = $configuration->getParsedExtension();
         $outputExtWithDot = '.' . $outputExt;
-        $outputPath = $this->variableParser->parse($configuration->getOutputName()) . $outputExt;
+        $outputPath = $this->variableParser->parse($configuration->getOutputPath()) . $outputExt;
         $outputDirectory = dirname($outputPath);
 
         $intDir = $configuration->getIntermediateDirectory();

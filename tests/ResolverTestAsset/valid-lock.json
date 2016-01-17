@@ -1,0 +1,13 @@
+{
+    "constraints": {
+        "my-package": {
+            "development": false,
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "my-url",
+                "reference": "my-reference"
+            }
+        }
+    }
+}

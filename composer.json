@@ -8,6 +8,12 @@
             "PixelPolishers\\Resolver\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "PixelPolishers\\ResolverTest\\": "tests/ResolverTest/",
+            "PixelPolishers\\ResolverTestAsset\\": "tests/ResolverTestAsset/"
+        }
+    },
     "require": {
         "composer/semver": "~1.2",
         "composer/spdx-licenses": "~1.1",

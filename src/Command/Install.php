@@ -58,7 +58,7 @@ class Install extends Update
             return 0;
         }
 
-        $this->downloadPackages($output, $resolver);
+        $this->downloadPackages($output, $resolver, $config);
 
         if (!$lockConfig) {
             $this->saveLockFile($output, $resolver);

@@ -112,7 +112,8 @@
                             "additionalProperties": false,
                             "required": [
                                 "name",
-                                "platform"
+                                "platform",
+                                "output"
                             ],
                             "properties": {
                                 "debug": {
@@ -155,13 +156,9 @@
                                     "type": "string",
                                     "description": "The name of the configuration (e.g. Debug, Release, etc.)."
                                 },
-                                "output-name": {
+                                "output": {
                                     "type": "string",
                                     "description": "The file or directory to output the compiled binary to."
-                                },
-                                "output-ext": {
-                                    "type": "string",
-                                    "description": "The extension of the output file."
                                 },
                                 "paths": {
                                     "type": "object",
@@ -205,7 +202,7 @@
                         "description": "The list with dependencies.",
                         "items": {
                             "type": "object",
-                            "additionalProperties": false,
+                            "additionalProperties": true,
                             "oneOf": [
                                 {
                                     "$ref": "#/definitions/project-dependency"

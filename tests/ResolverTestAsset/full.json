@@ -10,7 +10,19 @@
     "vendor-dir": "my-vendor",
     "projects": [
         {
-            "name": "project1"
+            "name": "project1",
+            "dependencies": [
+                {
+                    "name": "dependency",
+                    "version": "*"
+                }
+            ],
+            "dependencies-dev": [
+                {
+                    "name": "dependency",
+                    "version": "*"
+                }
+            ]
         },
         {
             "name": "project2"

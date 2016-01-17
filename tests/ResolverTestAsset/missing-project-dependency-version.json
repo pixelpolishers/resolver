@@ -1,0 +1,13 @@
+{
+    "name": "vendor/name",
+    "projects": [
+        {
+            "name": "project",
+            "dependencies": [
+                {
+                    "name": "dependency"
+                }
+            ]
+        }
+    ]
+}
